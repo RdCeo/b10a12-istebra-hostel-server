@@ -1,120 +1,68 @@
-## Website Name : Hostel Management Server
+# 🌐 Istebraa Hostel Management Server
 
-- Description :
-- This repository contains the server-side implementation of the Hostel Management System, built using Node.js, Express.js, MongoDB, and other technologies. The server provides robust features for user authentication, meal management, admin controls, and payment processing.
+Hi! I’m **Md. Moniruzzaman**, and this repository contains the **server-side implementation** of my **Istebraa Hostel Management System**. It’s built using **Node.js**, **Express.js**, **MongoDB**, and other technologies. This project is designed to handle core backend functionalities like **user authentication**, **meal management**, **admin controls**, and **Stripe payment integration** for a modern hostel management solution.
 
-## Server Site Link :
+---
 
--- https://b10-a12-server-side.vercel.app/
+## 🌐 Server Live Link
 
-## Features
+👉 [https://istebra-hostel-server.onrender.com]
 
-### User Authentication and Authorization:
+---
 
-- Secure JWT-based authentication with role-based access control.
-- Cookie-based token management for secure and persistent sessions.
+## 🚀 Features
 
-### Admin Controls:
+### 🔐 User Authentication & Authorization
+- Secure **JWT-based authentication** with role-based access control.
+- **Cookie-based token management** for secure and persistent sessions.
 
-- Manage users, including role updates and search functionality.
-- Admin-only access to meal management and review controls.
+### 🛡️ Admin Controls
+- Manage users, roles, and perform admin-only actions.
+- Admin-exclusive access to meal management and review control features.
 
-### Meal Management:
+### 🍽️ Meal Management
+- Add, update, view, and delete meals (Admin only).
+- Filter and sort meals by category, likes, and other criteria.
 
-- CRUD operations for meals, including adding, updating, viewing, and deleting meals.
-- Dynamic sorting and filtering by categories and likes.
+### 📝 Review System
+- Users can add, view, and manage meal reviews.
+- Admins can monitor, approve, or update review statuses.
 
-### Review System:
+### 📦 Meal Requests
+- Users can submit meal requests for admin review.
+- Admins have full control to approve or reject requests.
 
-- Users can add, view, and manage reviews for meals.
-- Admins can monitor and update review statuses.
+### 💳 Stripe Payment Integration
+- **Stripe-powered payment processing** for secure transactions.
+- Manage payment history and premium subscriptions.
 
-### Request Meal Feature:
+### 🛡️ Security Middleware
+- Custom middleware for **token verification** and **admin role checks**.
+- Protects routes and prevents unauthorized access.
 
-- Users can request meals, which are stored in a separate collection for admin review.
-- Admins can approve or reject meal requests.
-
-### Payment Integration:
-
-- Stripe-based payment processing for secure transactions.
-- Payment history and premium subscription management.
-
-### Middleware for Security:
-
-- Custom middleware for verifying tokens and admin roles.
-- Prevention of unauthorized access to protected routes.
-
-### Database Management:
-
+### 📊 Database Management
 - MongoDB collections for users, meals, reviews, payments, and requests.
-- Optimized queries for efficient data retrieval.
+- Efficient queries and optimized data retrieval.
 
-### Search and Filter Functionality:
+### 🔍 Search & Filter
+- Dynamic search across users and meals.
+- Case-insensitive, partial matching for an improved experience.
 
-- Dynamic search options for users and meals based on various criteria.
-- Case-insensitive and partial matching for enhanced user experience.
+---
 
-## Technologies Used
+## 🛠️ Technologies Used
 
-- Backend Framework: Express.js
-- Database: MongoDB
-- Authentication: JSON Web Token (JWT)
-- Payment Integration: Stripe
-- Environment Management: dotenv
-- Middleware: Cookie-parser, CORS
+- **Backend Framework**: Express.js
+- **Database**: MongoDB
+- **Authentication**: JSON Web Token (JWT)
+- **Payment Integration**: Stripe
+- **Environment Management**: dotenv
+- **Middleware**: cookie-parser, cors
 
-## Installation and Setup
+---
 
-### Clone the repository
+## 🚀 Getting Started
 
-- git clone
-
-### Install dependencies
-
-- npm install
-
-### Start the server
-
-- nodemon index.js / npm run dev
-
-## API Endpoints
-
-### Authentication
-
-- POST /jwt - Generate a JWT for user authentication.
-- POST /logout - Logout a user by clearing the authentication cookie.
-
-### User Management
-
-- POST /users - Register a new user.
-- GET /user/:email - Retrieve user details by email.
-- PATCH /users/role/:id - Update user role.
-
-### Meal Management
-
-- POST /add-meals - Add a new meal (Admin only).
-- GET /all-meals - Retrieve all published meals with filtering options.
-- PATCH /update-like/:id - Increment likes for a meal.
-- DELETE /delete/meal/:id - Delete a meal (Admin only).
-
-### Payment
-
-- POST /create-payment-intent - Generate a payment intent for Stripe.
-- POST /payment-info - Save payment details after successful transactions.
-- GET /payment/history/:email - Retrieve payment history for a user.
-
-### Reviews
-
-- POST /reviews - Add a review for a meal.
-- GET /reviews/:id - Get reviews for a specific meal.
-- PATCH /update-reviews/:id - Update review count for a meal.
-
-## dependencies:
-
-- "cookie-parser": "^1.4.7",
-- "cors": "^2.8.5",
-- "dotenv": "^16.4.7",
-- "express": "^4.21.2",
-- "jsonwebtoken": "^9.0.2",
-- "mongodb": "^6.12.0",
-- "stripe": "^17.5.0"
+### Clone the Repository
+```bash
+git clone https://github.com/RdCeo/b10a12-istebra-hostel-server.git
