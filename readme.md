@@ -6,7 +6,7 @@ Hi! I’m **Md. Moniruzzaman**, and this repository contains the **server-side i
 
 ## 🌐 Server Live Link
 
-👉 [https://istebra-hostel-server.onrender.com]
+👉 [https://b10a12-istebra-hostel-server.vercel.app/]
 
 ---
 
