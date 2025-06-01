@@ -106,14 +106,19 @@ app.post("/users", async (req, res) => {
 
 //get data from User Collection by role base
 app.get("/user/role/:email", async (req, res) => {
-  const email = req.params.email;
-  const user = await usersCollection.findOne({ email });
-  if (user) {
-    res.send(user.role);
-  } else {
-    res.status(404).send("User not found");
+  try {
+    const email = req.params.email;
+    const user = await usersCollection.findOne({ email });
+    if (!user) {
+      return res.status(404).send({ message: "User not found" });
+    }
+    res.send({ role: user.role });
+  } catch (error) {
+    console.error(error);
+    res.status(500).send({ message: "Internal Server Error" });
   }
 });
+
 //get data from User Collection by role base
 
 //Create payment Intent
