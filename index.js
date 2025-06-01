@@ -17,7 +17,7 @@ app.use(
     origin: [
       "http://localhost:5173",
       "http://localhost:5174",
-      "https://istebra-hostel.netlify.app/",
+      "https://istebra-hostel.netlify.app",
     ],
     credentials: true,
     optionsSuccessStatus: 200,
@@ -66,7 +66,7 @@ const requestMealCollection = client
   .collection("requestMeals");
 const upcomingLikeCollection = client
   .db("hostelManagement")
-  .collection("Likes");
+  .collection("likes");
 //All Collection
 
 //Create token use jwt
